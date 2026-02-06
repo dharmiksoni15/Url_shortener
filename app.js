@@ -3,7 +3,7 @@ import path from "path";
 import crypto from "crypto";
 import { readFile, writeFile } from "fs/promises";
 
-const PORT = 3002;
+const PORT = 3002=process.env.PORT || 3002;
 const data_file = path.join("data", "links.json");
 
 const serverFile = async (res, filePath, contentType) => {
